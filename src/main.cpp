@@ -21,6 +21,8 @@ void setup()
     attachInterrupt(digitalPinToInterrupt(rc1Pin), rc1intFunk, CHANGE);
 
     setNonchangingLeds();
+    szLed.setPWMSingle(ONduty);
+    obLed.setPWMSingle(ONduty);
     // always changes brightness and updates 100% mode led
     ONduty = 2 * DUTY_MAX;
 }
